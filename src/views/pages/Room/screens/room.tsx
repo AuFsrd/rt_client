@@ -2,7 +2,7 @@ import { UserList, UserDataForm, RollResult } from "views/components";
 import { useState, useEffect, useContext, useCallback, MouseEvent } from "react";
 import { Socket } from "socket.io-client";
 import { IRoll, ISafeUser, IUser } from "models/interfaces";
-import { ClientEvents, ServerEvents } from "models/api";
+import { ClientEvents, ServerEvents } from "data/api";
 import {
   Alert,
   Backdrop,

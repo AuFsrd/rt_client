@@ -2,7 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { PageContainer } from "views/components";
 import { useState, useEffect, useContext } from "react";
 import { Socket, io } from "socket.io-client";
-import { ClientEvents as ce, ServerEvents as se } from "models/api";
+import { ClientEvents as ce, ServerEvents as se } from "data/api";
 import RoomScreen from "./screens/room";
 import { Box, Button, CircularProgress, Typography } from "@mui/material";
 import { UserCtx } from "App";
