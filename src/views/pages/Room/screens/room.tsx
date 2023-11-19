@@ -1,5 +1,5 @@
-import { UserList, UserDataForm, RollResult } from "layouts/components";
-import { useState, useEffect, useContext, useCallback } from "react";
+import { UserList, UserDataForm, RollResult } from "views/components";
+import { useState, useEffect, useContext, useCallback, MouseEvent } from "react";
 import { Socket } from "socket.io-client";
 import { IRoll, ISafeUser, IUser } from "models/interfaces";
 import { ClientEvents, ServerEvents } from "models/api";
@@ -43,8 +43,8 @@ const RoomScreen = ({ room, socket }: IProps) => {
     return true;
   }, [setUser, socket]);
 
-  const copyToClipboard = (event: React.MouseEvent<HTMLButtonElement>) => {
-    navigator.clipboard.writeText(room);
+  const copyToClipboard = async (event: MouseEvent<HTMLButtonElement>) => {
+    await navigator.clipboard.writeText(room);
     setAnchor(event.currentTarget);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
@@ -75,7 +75,7 @@ const RoomScreen = ({ room, socket }: IProps) => {
       return identifiedUser;
     });
 
-    console.log("Rendrer to test dependencies. More than 1 is issue")
+    console.log("Render to test dependencies. More than 1 is issue")
 
   }, [socket, setUser, updateUserData]);
 
