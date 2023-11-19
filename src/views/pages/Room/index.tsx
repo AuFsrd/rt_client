@@ -6,7 +6,6 @@ import { ClientEvents as ce, ServerEvents as se } from "data/api";
 import RoomScreen from "./screens/room";
 import { Box, Button, CircularProgress, Typography } from "@mui/material";
 import { UserCtx } from "App";
-import * as process from "process";
 
 const RoomPage = () => {
   const { id } = useParams();

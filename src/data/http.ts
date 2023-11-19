@@ -1,6 +1,5 @@
 import axios from "axios";
 import { IRoomResponse } from "data/api";
-import * as process from "process";
 
 const baseUrl = process.env.REACT_APP_SERVER;
 
